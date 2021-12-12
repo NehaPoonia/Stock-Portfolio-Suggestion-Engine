@@ -1,0 +1,21 @@
+{
+ "Ethical Investing": [
+  {"symbol":"TSLA","name":"Tesla, Inc.","percentage": "30"},
+  {"symbol":"UNFI","name":"United Natural Foods, Inc.","percentage": "30"},
+  {"symbol":"WY","name":"Weyerhaeuser Company","percentage": "25"},
+  {"symbol":"GOOG","name":"Alphabet Inc.","percentage": "10"}
+  ],
+  "Growth Investing":[ 
+  
+  ],
+  "Index Investing": [
+  
+  ],
+  "Quality Investing": [
+  
+  ],
+  "Value Investing": [
+  
+  ]
+  
+}
