@@ -1,42 +1,62 @@
-<html> 
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
 
 
 
 
-	</head>
-	
-	<body>
+</head>
 
-        <form class="grid" action="/result" method="POST">
+<body>
 
-          {% if name %}
-            <center>
-              <h3 style="color: blue;" class="let_space">You will be investing {{name}} USD, Best of luck!</h3>
-            </center> 
+  <form class="grid" action="/result" method="POST">
 
-          {% endif %}
-           
-          <label for="name">Enter amount to invest in USD:</label>
-          <input type="text" id="name" name="name">
+    {% if name %}
+    <center>
+      <h3 style="color: blue;" class="let_space">You will be investing {{name}} USD, Best of luck!</h3>
+    </center>
 
-          <center><input class="file_submit" type="Submit"></center>
+    {% endif %}
 
-        </form>
+    <label for="name">Enter amount to invest in USD:</label>
+    <input type="text" id="name" name="name">
 
-        
+    <label for="strategy">Enter the strategy you want to choose:</label>
+    <select type="text" id="strategy" name="strategy" required>
+      <option name='Ethical Investing' value='Ethical Investing'>Ethical Investing </option>
+      <option name='Value Investing' value='Value Investing'>Value Investing </option>
+      <option name='Growth Investing' value='Growth Investing'>Growth Investing </option>
+      <option name='Index Investing' value='Index Investing'>Index Investing </option>
+      <option name='Quality Investing' value='Quality Investing'>Quality Investing </option>
+      <option name='Ethical and Value Investing' value='Ethical and Value Investing'>Ethical and Value Investing </option>
+      <option name='Ethical and Growth Investing' value='Ethical and Growth Investing'>Ethical and Growth Investing </option>
+      <option name='Ethical and Index Investing' value='Ethical and Index Investing'>Ethical and Index Investing </option>
+      <option name='Ethical and Quality Investing' value='Ethical and Quality Investing'>Ethical and Quality Investing </option>
+      <option name='Value and Growth Investing' value='Value and Growth Investing'>Value and Growth Investing </option>
+      <option name='Value and Index Investing' value='Value and Index Investing'>Value and Index Investing </option>
+      <option name='Value and Quality Investing' value='Value and Quality Investing'>Value and Quality Investing </option>
+      <option name='Growth and Quality Investing' value='Growth and Quality Investing'>Growth and Quality Investing </option>
+      <option name='Growth and Index Investing' value='Growth and Index Investing'>Growth and Index Investing </option>
+      <option name='Quality and Index Investing' value='Quality and Index Investing'>Quality and Index Investing </option>
 
-        
+    </select>
+    <center><input class="file_submit" type="Submit"></center>
 
-        
-        <br>
-        <br>
-        <br>
+  </form>
 
 
-    </body>
+
+
+
+
+  <br>
+  <br>
+  <br>
+
+
+</body>
 
 </html>
