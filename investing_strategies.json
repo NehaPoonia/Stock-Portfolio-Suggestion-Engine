@@ -1,9 +1,9 @@
 {
  "Ethical Investing": [
-  {"symbol":"TSLA","name":"Tesla, Inc.","percentage": "30"},
-  {"symbol":"UNFI","name":"United Natural Foods, Inc.","percentage": "30"},
-  {"symbol":"WY","name":"Weyerhaeuser Company","percentage": "25"},
-  {"symbol":"GOOG","name":"Alphabet Inc.","percentage": "10"}
+  {"symbol":"TSLA","name":"Tesla, Inc.","percentage": "40"},
+  {"symbol":"UNFI","name":"United Natural Foods, Inc.","percentage": "10"},
+  {"symbol":"WY","name":"Weyerhaeuser Company","percentage": "10"},
+  {"symbol":"GOOG","name":"Alphabet Inc.","percentage": "40"}
   ],
   "Growth Investing":[ 
   
