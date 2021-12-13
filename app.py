@@ -2,11 +2,12 @@ import time
 from datetime import datetime, timedelta
 from flask import Flask, render_template, url_for, request
 import json
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn
 import yfinance as yf
 app = Flask(__name__)
-
+matplotlib.use('Agg')
 
 @app.route('/')
 @app.route('/home')
