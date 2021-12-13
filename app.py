@@ -57,7 +57,7 @@ def one_investment_strategy(data, amount, strategy):
     print(dates)
     print(total_portfolio)
     print(current_value_of_investment)
-    
+    plt.clf()
     plt.plot(dates, total_portfolio)
     plt.xlabel("Last 5 days")
     plt.ylabel("Amount in USD")
@@ -126,7 +126,7 @@ def two_investment_strategy(data, amount, strategy1, strategy2):
     print(dates)
     print(total_portfolio)
     print(current_value_of_investment)
-    
+    plt.clf()
     plt.plot(dates, total_portfolio)
     plt.xlabel("Last 5 days")
     plt.ylabel("Amount in USD")
