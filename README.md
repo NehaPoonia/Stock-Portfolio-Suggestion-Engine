@@ -8,3 +8,6 @@ User will Input dollar amount to invest in USD (Minimum is $5000 USD). The Stock
   - python app.py runserver
   - Navigate to http://127.0.0.1:5000/
 
+## Project Presentation
+
+[Link to the presentation](https://docs.google.com/presentation/d/1aPAJHq_U563AYs45UH1i9pEYvrKJgfwuoYfdGOgIPow/edit?usp=sharing)
