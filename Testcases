@@ -1,0 +1,13 @@
+Validation check:
+ No amount selected  Error message(Select amount)
+ Amount Below 5000 Error message(Minimum amount is 5000)
+ Amount =6000 , No Input strategies - Error message(At least one strategy should be selected)
+ Negative amount/non digit - Error message(unsupported format)
+
+Test cases:
+Amount =6000 , Growth Investing
+Amount =6000 , Index Investing
+Amount =6000 , Quality Investing
+Amount =6000 , Ethical Investing
+Amount =6000 , Value Investing
+Amount =6000 , Any two 
