@@ -56,15 +56,82 @@ def one_investment_strategy(data, amount, strategy):
     print(dates)
     print(total_portfolio)
     print(current_value_of_investment)
+    
+    plt.plot(dates, total_portfolio)
+    plt.xlabel("Last 5 days")
+    plt.ylabel("Amount in USD")
+    plt.title("Overall Portfolio Trend")
+    plt.savefig('investment-strategy.jpeg')
     return necessary_info
-    # plt.savefig('templates/investment-strategy.png')
-    # plt.plot(dates, total_portfolio)
-    # plt.xlabel("Last 5 days")
-    # plt.ylabel("Amount in USD")
-    # plt.title("Overall Portfolio Trend")
-    # time.sleep(60)
-    # plt.savefig('templates\investment-strategy.jpeg')
-    # return render_template('one_strategy.html', name=amount, strategy=strategy)
+
+def two_investment_strategy(data, amount, strategy1, strategy2):
+    all_stock_portfolio = []
+    current_value_of_investment = 0
+    amount_to_invest = int(int(amount)/2)
+    necessary_info = []
+    for stock_item in data[strategy1]:
+        info = []
+        stock_portfolio = []
+        money_invested = (int(stock_item['percentage'])/100)*amount_to_invest
+        print("Money invested in", stock_item['name'], "is", money_invested)
+        stock = yf.Ticker(stock_item['symbol'])
+        current_price = stock.info['currentPrice']
+        print("Current value of", stock_item['name'], "is", current_price)
+        info.append(stock_item['name'])
+        info.append(money_invested)
+        info.append(current_price)
+        necessary_info.append(info)
+        stock = yf.Ticker(stock_item['symbol'])
+        hist = stock.history(period="5d")
+        number_of_shares = money_invested/current_price
+        for price in hist['Close']:
+            stock_portfolio.append(price*number_of_shares)
+        all_stock_portfolio.append(stock_portfolio)
+        current_value_of_investment += (current_price*number_of_shares)
+    for stock_item in data[strategy2]:
+        info = []
+        stock_portfolio = []
+        money_invested = (int(stock_item['percentage'])/100)*amount_to_invest
+        print("Money invested in", stock_item['name'], "is", money_invested)
+        stock = yf.Ticker(stock_item['symbol'])
+        current_price = stock.info['currentPrice']
+        print("Current value of", stock_item['name'], "is", current_price)
+        info.append(stock_item['name'])
+        info.append(money_invested)
+        info.append(current_price)
+        necessary_info.append(info)
+        stock = yf.Ticker(stock_item['symbol'])
+        hist = stock.history(period="5d")
+        number_of_shares = money_invested/current_price
+        for price in hist['Close']:
+            stock_portfolio.append(price*number_of_shares)
+        all_stock_portfolio.append(stock_portfolio)
+        current_value_of_investment += (current_price*number_of_shares)
+
+    print(all_stock_portfolio)
+    total_portfolio = []
+    for index in range(len(all_stock_portfolio[0])):
+        s = 0
+        s = s + all_stock_portfolio[0][index] + all_stock_portfolio[1][index] + \
+            all_stock_portfolio[2][index] + all_stock_portfolio[3][index] + all_stock_portfolio[4][index] + all_stock_portfolio[5][index] + all_stock_portfolio[6][index] + all_stock_portfolio[7][index]
+        total_portfolio.append(s)
+    print(total_portfolio)
+    current_time = datetime.now()
+    current_day = current_time.strftime('%m-%d-%Y')
+    d = str(current_day)
+    d1 = datetime.strptime(d, '%m-%d-%Y')
+    dates = [(d1-timedelta(days=i)).strftime('%m-%d-%Y')
+             for i in range(5, 0, -1)]
+    print(dates)
+    print(total_portfolio)
+    print(current_value_of_investment)
+    
+    plt.plot(dates, total_portfolio)
+    plt.xlabel("Last 5 days")
+    plt.ylabel("Amount in USD")
+    plt.title("Overall Portfolio Trend")
+    plt.savefig('two_investment-strategy.jpeg')
+    return necessary_info
 
 
 @app.route('/result', methods=['POST', 'GET'])
@@ -76,6 +143,8 @@ def result():
     with open('investing_strategies.json') as f:
         data = json.load(f)
     print(data)
+    l = strategy.split()
+    
     if len(strategy.split()) == 2:
         info = one_investment_strategy(data, name, strategy)
         stock1 = info[0][0]
@@ -90,9 +159,39 @@ def result():
         stock2_money= info[1][1]
         stock3_money = info[2][1]
         stock4_money = info[3][1]
+        return render_template('one_strategy.html', name=name, strategy=strategy, stock1 = stock1, stock2 = stock2, stock3 = stock3, stock4 = stock4, stock1_price = stock1_price, stock2_price = stock2_price, stock3_price = stock3_price, stock4_price = stock4_price, stock1_money = stock1_money, stock2_money = stock2_money, stock3_money = stock3_money, stock4_money = stock4_money)
     else:
-        print("No")
-    return render_template('one_strategy.html', name=name, strategy=strategy, stock1 = stock1, stock2 = stock2, stock3 = stock3, stock4 = stock4, stock1_price = stock1_price, stock2_price = stock2_price, stock3_price = stock3_price, stock4_price = stock4_price, stock1_money = stock1_money, stock2_money = stock2_money, stock3_money = stock3_money, stock4_money = stock4_money)
+        amount = int(name)
+        strategy1_list = l[0:2]
+        strategy2_list = l[3:]
+        strategy1 = ' '.join(strategy1_list)
+        strategy2 = ' '.join(strategy2_list)
+        info = two_investment_strategy(data, amount, strategy1, strategy2)
+        stock1 = info[0][0]
+        stock2 = info[1][0]
+        stock3 = info[2][0]
+        stock4 = info[3][0]
+        stock1_price = info[0][2]
+        stock2_price = info[1][2]
+        stock3_price = info[2][2]
+        stock4_price = info[3][2]
+        stock1_money = info[0][1]
+        stock2_money= info[1][1]
+        stock3_money = info[2][1]
+        stock4_money = info[3][1]
+        stock5 = info[4][0]
+        stock6 = info[5][0]
+        stock7 = info[6][0]
+        stock8 = info[7][0]
+        stock5_price = info[4][2]
+        stock6_price = info[5][2]
+        stock7_price = info[6][2]
+        stock8_price = info[7][2]
+        stock5_money = info[4][1]
+        stock6_money= info[5][1]
+        stock7_money = info[6][1]
+        stock8_money = info[7][1]
+        return render_template('two_strategies.html', name=name, strategy=strategy1, strategy2 = strategy, stock1 = stock1, stock2 = stock2, stock3 = stock3, stock4 = stock4, stock5 = stock5, stock6 = stock6, stock7 = stock7, stock8 = stock8, stock1_price = stock1_price, stock2_price = stock2_price, stock3_price = stock3_price, stock4_price = stock4_price, stock5_price = stock5_price, stock6_price = stock6_price, stock7_price = stock7_price, stock8_price = stock8_price, stock1_money = stock1_money, stock2_money = stock2_money, stock3_money = stock3_money, stock4_money = stock4_money, stock5_money = stock5_money, stock6_money = stock6_money, stock7_money = stock7_money, stock8_money = stock8_money)
 
 
 if __name__ == "__main__":
