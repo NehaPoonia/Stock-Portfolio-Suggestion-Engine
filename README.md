@@ -3,7 +3,7 @@ User will Input dollar amount to invest in USD (Minimum is $5000 USD). The Stock
 
 ## Steps to run the application
   - Ensure that Python 3 and pip are installed in the system.
-  - Ensure that there is a strong internet connection as the application needs yfinance api to get information about shares
+  - Ensure that there is a strong internet connection as the application needs yfinance api to get information about stocks.
   - pip install -r requirements.txt
   - python app.py runserver
   - Navigate to http://127.0.0.1:5000/
