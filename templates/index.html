@@ -22,7 +22,7 @@
     {% endif %}
 
     <label for="name">Enter amount to invest in USD:</label>
-    <input type="text" id="name" name="name">
+    <input type="number" id="name" name="name" required min='5000'>
 
     <label for="strategy">Enter the strategy you want to choose:</label>
     <select type="text" id="strategy" name="strategy" required>
