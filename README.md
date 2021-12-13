@@ -1,30 +1,10 @@
 # Stock-Portfolio-Suggestion-Engine
-User will Input dollar amount to invest in USD (Minimum is $5000 USD)
+User will Input dollar amount to invest in USD (Minimum is $5000 USD). The Stock Portfolio Suggestion Engine will recommend a set of stocks, return the present value of the stock, show how the money will be distributed to buy the stocks and return the overall portfolio trend over the last 5 days. YFinance APP is used in this project to get information related to the stocks.
 
-## Pick one or two investment strategies:
-  - Ethical Investing
-  - Growth Investing
-  - Index Investing
-  - Quality Investing
-  - Value Investing
+## Steps to run the application
+  - Ensure that Python 3 and pip are installed in the system.
+  - Ensure that there is a strong internet connection as the application needs yfinance api to get information about shares
+  - pip install -r requirements.txt
+  - python app.py runserver
+  - Navigate to http://127.0.0.1:5000/
 
-## Index Investing strategy could map to the following ETFs:
-
-  - Vanguard Total Stock Market ETF (VTI)
-  - iShares Core MSCI Total Intl Stk (IXUS)
- -  iShares Core 10+ Year USD Bond (ILTB)
-
-## Ethical Investing strategy could map to these stocks:
-
-  - Apple (APPL)
-  - Adobe (ADBE)
-  - Nestle (NSRGY)
-Each strategy must map to at least 3 different stocks/ETFs.
-
- 
-
-## Output:
-- Which stocks are selected based on inputed strategies.
-- How the money are divided to buy the suggested stock.
-- The current values (up to the sec via Internet) of the overall portfolio (including all the stocks / ETFs)
-- A weekly trend of the portfolio value. In order words, keep 5 days history of the overall portfolio value.
