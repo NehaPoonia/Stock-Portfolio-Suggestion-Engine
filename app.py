@@ -131,7 +131,7 @@ def two_investment_strategy(data, amount, strategy1, strategy2):
     plt.xlabel("Last 5 days")
     plt.ylabel("Amount in USD")
     plt.title("Overall Portfolio Trend")
-    plt.savefig('two_investment-strategy.jpeg')
+    plt.savefig('static/images/two_investment-strategy.jpeg')
     return necessary_info
 
 
@@ -192,7 +192,7 @@ def result():
         stock6_money= info[5][1]
         stock7_money = info[6][1]
         stock8_money = info[7][1]
-        return render_template('two_strategies.html', name=name, strategy=strategy1, strategy2 = strategy, stock1 = stock1, stock2 = stock2, stock3 = stock3, stock4 = stock4, stock5 = stock5, stock6 = stock6, stock7 = stock7, stock8 = stock8, stock1_price = stock1_price, stock2_price = stock2_price, stock3_price = stock3_price, stock4_price = stock4_price, stock5_price = stock5_price, stock6_price = stock6_price, stock7_price = stock7_price, stock8_price = stock8_price, stock1_money = stock1_money, stock2_money = stock2_money, stock3_money = stock3_money, stock4_money = stock4_money, stock5_money = stock5_money, stock6_money = stock6_money, stock7_money = stock7_money, stock8_money = stock8_money,url='static/images/investment-strategy.jpeg')
+        return render_template('two_strategies.html', name=name, strategy=strategy1, strategy2 = strategy, stock1 = stock1, stock2 = stock2, stock3 = stock3, stock4 = stock4, stock5 = stock5, stock6 = stock6, stock7 = stock7, stock8 = stock8, stock1_price = stock1_price, stock2_price = stock2_price, stock3_price = stock3_price, stock4_price = stock4_price, stock5_price = stock5_price, stock6_price = stock6_price, stock7_price = stock7_price, stock8_price = stock8_price, stock1_money = stock1_money, stock2_money = stock2_money, stock3_money = stock3_money, stock4_money = stock4_money, stock5_money = stock5_money, stock6_money = stock6_money, stock7_money = stock7_money, stock8_money = stock8_money,url='static/images/two_investment-strategy.jpeg')
 
 
 if __name__ == "__main__":
