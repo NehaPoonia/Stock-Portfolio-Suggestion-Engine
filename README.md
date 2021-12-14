@@ -10,6 +10,18 @@ User will Input dollar amount to invest in USD (Minimum is $5000 USD). The Stock
 
 ## Project Presentation
 
-[Link to the slides](https://docs.google.com/presentation/d/1aPAJHq_U563AYs45UH1i9pEYvrKJgfwuoYfdGOgIPow/edit?usp=sharing)
+[Link to the presentation](https://docs.google.com/presentation/d/1aPAJHq_U563AYs45UH1i9pEYvrKJgfwuoYfdGOgIPow/edit?usp=sharing)
 
-[Link to the video](https://youtu.be/_i9843DATsA)
+## Screenshots of the UI
+
+![image](https://user-images.githubusercontent.com/37792987/145952844-58955da5-c85a-4e6b-aedb-ce779792d53e.png)
+
+![image](https://user-images.githubusercontent.com/37792987/145952892-c266ef12-790c-4003-b08d-2edd2732ed62.png)
+
+![image](https://user-images.githubusercontent.com/37792987/145953011-4d948545-486c-403e-b648-ffc097d2788b.png)
+
+![image](https://user-images.githubusercontent.com/37792987/145953049-f7c1adf7-f406-4e37-a6d1-062e125a858e.png)
+
+![image](https://user-images.githubusercontent.com/37792987/145953266-6eeee284-4a52-46ec-a03f-36a62d500581.png)
+
+![image](https://user-images.githubusercontent.com/37792987/145953314-0df93dff-5e7a-4f3b-89b7-645efa838685.png)
