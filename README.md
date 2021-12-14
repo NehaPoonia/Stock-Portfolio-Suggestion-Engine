@@ -10,4 +10,5 @@ User will Input dollar amount to invest in USD (Minimum is $5000 USD). The Stock
 
 ## Project Presentation
 
-[Link to the presentation](https://docs.google.com/presentation/d/1aPAJHq_U563AYs45UH1i9pEYvrKJgfwuoYfdGOgIPow/edit?usp=sharing)
+[Link to the slides](https://docs.google.com/presentation/d/1aPAJHq_U563AYs45UH1i9pEYvrKJgfwuoYfdGOgIPow/edit?usp=sharing)
+[Link to the video](https://youtu.be/_i9843DATsA)
