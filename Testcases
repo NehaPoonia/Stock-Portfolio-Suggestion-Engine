@@ -1,13 +1,44 @@
-Validation check:
- No amount selected  Error message(Select amount)
- Amount Below 5000 Error message(Minimum amount is 5000)
- Amount =6000 , No Input strategies - Error message(At least one strategy should be selected)
- Negative amount/non digit - Error message(unsupported format)
 
-Test cases:
-Amount =6000 , Growth Investing
-Amount =6000 , Index Investing
-Amount =6000 , Quality Investing
-Amount =6000 , Ethical Investing
-Amount =6000 , Value Investing
-Amount =6000 , Any two 
+1
+Input-No amount selected
+Expected Output-Error message(Select amount)
+Actual Output-Error message(Select amount)
+2
+Input-Amount Below 5000
+Expected Output-Error message(Minimum amount is 5000)
+Actual Output-Error message(Minimum amount is 5000)
+3
+Input-Amount =6000 , No Input strategies 
+Expected Output-Default Strategy Ethical selected
+Actual Output-Default Strategy Ethical selected
+4
+Input-Negative amount/non digit
+Expected Output-Error message(unsupported format)
+Actual Output-Error message(unsupported format)
+5
+Input-Amount =6000 , Strategy = Growth Investing
+Expected Output-Values and Graph
+Actual Output-Values and Graph
+6
+Input-Amount =6000, Strategy = Index Investing  
+Expected Output-Values and Graph  
+Actual Output-Values and Graph
+7
+Input-Amount =6000, Strategy = Quality Investing
+Expected Output-Values and Graph
+Actual Output-Values and Graph
+8
+Input-Amount =6000 , Strategy = Growth Investing
+Expected Output-Values and Graph
+Actual Output-Values and Graph
+9
+Input-Amount =6000 , Strategy = Ethical Investing
+Expected Output-Values and Graph
+Actual Output-Values and Graph
+10
+Input-Amount =6000 , Strategy =  Ethical Investing And Quality Investing
+Expected Output-Values and Graph
+Actual Output-Values and Graph
+
+
+
