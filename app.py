@@ -27,7 +27,10 @@ def one_investment_strategy(data, amount, strategy):
         money_invested = (int(stock_item['percentage'])/100)*amount_to_invest
         print("Money invested in", stock_item['name'], "is", money_invested)
         stock = yf.Ticker(stock_item['symbol'])
-        current_price = stock.info['currentPrice']
+        if strategy == 'Index Investing':
+            current_price = stock.info['navPrice']
+        else:    
+            current_price = stock.info['currentPrice']
         print("Current value of", stock_item['name'], "is", current_price)
         info.append(stock_item['name'])
         info.append(money_invested)
@@ -87,7 +90,10 @@ def two_investment_strategy(data, amount, strategy1, strategy2):
         money_invested = (int(stock_item['percentage'])/100)*amount_to_invest
         print("Money invested in", stock_item['name'], "is", money_invested)
         stock = yf.Ticker(stock_item['symbol'])
-        current_price = stock.info['currentPrice']
+        if strategy1 == 'Index Investing':
+            current_price = stock.info['navPrice']
+        else:    
+            current_price = stock.info['currentPrice']
         print("Current value of", stock_item['name'], "is", current_price)
         info.append(stock_item['name'])
         info.append(money_invested)
@@ -106,7 +112,10 @@ def two_investment_strategy(data, amount, strategy1, strategy2):
         money_invested = (int(stock_item['percentage'])/100)*amount_to_invest
         print("Money invested in", stock_item['name'], "is", money_invested)
         stock = yf.Ticker(stock_item['symbol'])
-        current_price = stock.info['currentPrice']
+        if strategy2 == 'Index Investing':
+            current_price = stock.info['navPrice']
+        else:    
+            current_price = stock.info['currentPrice']
         print("Current value of", stock_item['name'], "is", current_price)
         info.append(stock_item['name'])
         info.append(money_invested)
